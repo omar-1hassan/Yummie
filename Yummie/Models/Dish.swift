@@ -7,10 +7,10 @@
 
 import Foundation
  
-struct Dish {
+struct Dish: Decodable{
     let id: String?
     let name: String?
-    let discription: String?
+    let description: String?
     let image: String?
     let calories: Int?
     

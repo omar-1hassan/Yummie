@@ -19,7 +19,7 @@ class DishLandscapeCollectionViewCell: UICollectionViewCell {
     func setupCell(dish: Dish){
         dishImgView.kf.setImage(with: dish.image?.asUrl)
         titleLbl.text = dish.name
-        discriptionLbl.text = dish.discription
+        discriptionLbl.text = dish.description
         caloriesLbl.text = dish.formatedCalory
     }
 

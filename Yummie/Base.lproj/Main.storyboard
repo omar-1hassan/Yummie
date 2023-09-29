@@ -334,11 +334,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ae-wO-k2j">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="628"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8Ae-wO-k2j">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="596"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="k4u-nZ-8pz">
-                                <rect key="frame" x="16" y="644" width="361" height="190"/>
+                                <rect key="frame" x="16" y="612" width="361" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrO-vg-g7a">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
@@ -407,7 +407,7 @@
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f6R-Ah-idT" firstAttribute="trailing" secondItem="k4u-nZ-8pz" secondAttribute="trailing" constant="16" id="5Yu-bm-1KO"/>
-                            <constraint firstItem="k4u-nZ-8pz" firstAttribute="bottom" secondItem="f6R-Ah-idT" secondAttribute="bottom" constant="16" id="JDE-AD-vBg"/>
+                            <constraint firstItem="k4u-nZ-8pz" firstAttribute="bottom" secondItem="f6R-Ah-idT" secondAttribute="bottom" constant="-16" id="JDE-AD-vBg"/>
                             <constraint firstItem="k4u-nZ-8pz" firstAttribute="top" secondItem="8Ae-wO-k2j" secondAttribute="bottom" constant="16" id="KG8-cw-LnV"/>
                             <constraint firstItem="8Ae-wO-k2j" firstAttribute="trailing" secondItem="f6R-Ah-idT" secondAttribute="trailing" id="beO-GK-VWf"/>
                             <constraint firstItem="k4u-nZ-8pz" firstAttribute="leading" secondItem="f6R-Ah-idT" secondAttribute="leading" constant="16" id="fPK-eE-TOA"/>

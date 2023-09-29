@@ -11,5 +11,7 @@ target 'Yummie' do
 
   # Pods for Yummie
   	pod 'Kingfisher'
+    pod 'ProgressHUD'
+    pod 'IQKeyboardManagerSwift', '6.5.1'
 
 end

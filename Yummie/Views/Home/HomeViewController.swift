@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
 
@@ -16,31 +17,16 @@ class HomeViewController: UIViewController {
     
     
     //MARK: - Variables
-    var categories: [DishCategory] = [
-        .init(id: "id1", name: "Africa Dish", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish2", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish3", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish4", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish5", image: "https://picsum.photos/100/200")
-    ]
+    var categories: [DishCategory] = []
     
-    var populars: [Dish] = [
-        .init(id: "id1", name: "Indomie", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 34),
-        .init(id: "id1", name: "Garri", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 104),
-        .init(id: "id1", name: "Garri", discription: "This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 104),
-        .init(id: "id1", name: "Piza", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 98)
-    ]
+    var populars: [Dish] = []
     
-    var spesials: [Dish] = [
-        .init(id: "id1", name: "Fried Plantain", discription: "This is my favourite dish", image: "https://picsum.photos/100/200", calories: 306),
-        .init(id: "id1", name: "Beans and Garri", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 394)
-    ]
+    var spesials: [Dish] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
     }
-
 }
 
 extension HomeViewController{
@@ -56,6 +42,25 @@ extension HomeViewController{
         specialsCollectionView.delegate = self
         specialsCollectionView.dataSource = self
         specialsCollectionView.register(UINib(nibName: "DishLandscapeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DishLandscapeCollectionViewCell")
+        
+        ProgressHUD.show()
+        NetworkService.shared.fetchAllCategories { [weak self] (result) in
+            switch result {
+            case .success(let allDishes):
+                ProgressHUD.dismiss()
+                self?.categories = allDishes.categories ?? []
+                self?.populars = allDishes.populars ?? []
+                self?.spesials = allDishes.specials ?? []
+                
+                self?.categoryCollectionView.reloadData()
+                self?.popularCollectionView.reloadData()
+                self?.specialsCollectionView.reloadData()
+                
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
+
     }
 }
 

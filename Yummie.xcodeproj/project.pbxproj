@@ -12,6 +12,12 @@
 		041F50632AC0E00900AC312F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F50612AC0E00900AC312F /* Main.storyboard */; };
 		041F50652AC0E01000AC312F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041F50642AC0E01000AC312F /* Assets.xcassets */; };
 		041F50682AC0E01000AC312F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F50662AC0E01000AC312F /* LaunchScreen.storyboard */; };
+		0496999D2AC5C0F800411CE7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496999C2AC5C0F800411CE7 /* NetworkService.swift */; };
+		0496999F2AC5C11E00411CE7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496999E2AC5C11E00411CE7 /* Route.swift */; };
+		049699A12AC5C13B00411CE7 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049699A02AC5C13B00411CE7 /* Method.swift */; };
+		049699A32AC5C15200411CE7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049699A22AC5C15200411CE7 /* AppError.swift */; };
+		049699A52AC5C16B00411CE7 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049699A42AC5C16B00411CE7 /* ApiResponse.swift */; };
+		049699A72AC5C20600411CE7 /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049699A62AC5C20600411CE7 /* AllDishes.swift */; };
 		04C51F992AC1672E0019ACD9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C51F982AC1672D0019ACD9 /* OnBoardingViewController.swift */; };
 		04C51F9B2AC16A110019ACD9 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C51F9A2AC16A110019ACD9 /* OnBoardingSlide.swift */; };
 		04C51F9D2AC16BD30019ACD9 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C51F9C2AC16BD30019ACD9 /* OnBoardingCollectionViewCell.swift */; };
@@ -44,6 +50,12 @@
 		041F50642AC0E01000AC312F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041F50672AC0E01000AC312F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041F50692AC0E01000AC312F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0496999C2AC5C0F800411CE7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0496999E2AC5C11E00411CE7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		049699A02AC5C13B00411CE7 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		049699A22AC5C15200411CE7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		049699A42AC5C16B00411CE7 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		049699A62AC5C20600411CE7 /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
 		04C51F982AC1672D0019ACD9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		04C51F9A2AC16A110019ACD9 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
 		04C51F9C2AC16BD30019ACD9 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				04C51FA92AC1EFE70019ACD9 /* Extensions */,
+				0496999B2AC5AAD500411CE7 /* Networking */,
 				04C51F962AC166E00019ACD9 /* CustomViews */,
 				04C51F952AC166D50019ACD9 /* Views */,
 				04C51F942AC166C80019ACD9 /* Models */,
@@ -117,6 +130,18 @@
 			path = Yummie;
 			sourceTree = "<group>";
 		};
+		0496999B2AC5AAD500411CE7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0496999C2AC5C0F800411CE7 /* NetworkService.swift */,
+				0496999E2AC5C11E00411CE7 /* Route.swift */,
+				049699A02AC5C13B00411CE7 /* Method.swift */,
+				049699A22AC5C15200411CE7 /* AppError.swift */,
+				049699A42AC5C16B00411CE7 /* ApiResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		04C51F942AC166C80019ACD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +149,7 @@
 				04C51FA72AC1EDA80019ACD9 /* DishCategory.swift */,
 				04C51FB42AC201F40019ACD9 /* Dish.swift */,
 				04C51FCC2AC2E05F0019ACD9 /* Order.swift */,
+				049699A62AC5C20600411CE7 /* AllDishes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,13 +434,19 @@
 				041F505C2AC0E00900AC312F /* AppDelegate.swift in Sources */,
 				041F505E2AC0E00900AC312F /* SceneDelegate.swift in Sources */,
 				04C51FAE2AC1F3E40019ACD9 /* CardView.swift in Sources */,
+				049699A12AC5C13B00411CE7 /* Method.swift in Sources */,
+				0496999D2AC5C0F800411CE7 /* NetworkService.swift in Sources */,
 				04C51FA82AC1EDA80019ACD9 /* DishCategory.swift in Sources */,
+				049699A32AC5C15200411CE7 /* AppError.swift in Sources */,
+				0496999F2AC5C11E00411CE7 /* Route.swift in Sources */,
 				04C51F9D2AC16BD30019ACD9 /* OnBoardingCollectionViewCell.swift in Sources */,
+				049699A72AC5C20600411CE7 /* AllDishes.swift in Sources */,
 				04C51F992AC1672E0019ACD9 /* OnBoardingViewController.swift in Sources */,
 				04C51FB22AC200880019ACD9 /* DishPortraiteCollectionViewCell.swift in Sources */,
 				04C51FB52AC201F40019ACD9 /* Dish.swift in Sources */,
 				04C51FA52AC1EC750019ACD9 /* CategoryCollectionViewCell.swift in Sources */,
 				04C51FC42AC2D8A50019ACD9 /* DishListTableViewCell.swift in Sources */,
+				049699A52AC5C16B00411CE7 /* ApiResponse.swift in Sources */,
 				04C51FA02AC1C75C0019ACD9 /* HomeViewController.swift in Sources */,
 				04C51FB92AC296A70019ACD9 /* DishLandscapeCollectionViewCell.swift in Sources */,
 			);

@@ -19,6 +19,6 @@ class DishPortraiteCollectionViewCell: UICollectionViewCell {
         titleLbl.text = dish.name
         dishImgView.kf.setImage(with: dish.image?.asUrl)
         caloriesLbl.text = dish.formatedCalory
-        discriptionLbl.text = dish.discription
+        discriptionLbl.text = dish.description
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ListOrdersViewController: UIViewController {
 
@@ -13,18 +14,26 @@ class ListOrdersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Variables
-    var orders: [Order] = [
-        .init(id: "id", name: "Omar Mohamed", dish: .init(id: "id1", name: "Indomie", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-        .init(id: "id", name: "Ahmed Mohamed", dish: .init(id: "id1", name: "Beans and Garrie", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-        .init(id: "id", name: "Ibrahim Mohamed", dish: .init(id: "id1", name: "Fride Yam", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-
-    ]
+    var orders: [Order] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initUI()
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        NetworkService.shared.fetchOrders { [weak self] (result) in
+            
+            switch result {
+            case .success(let orders):
+                ProgressHUD.dismiss()
+                
+                self?.orders = orders
+                self?.tableView.reloadData()
+                
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
+    }
 
 }
 
@@ -34,6 +43,8 @@ extension ListOrdersViewController{
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DishListTableViewCell", bundle: nil), forCellReuseIdentifier: "DishListTableViewCell")
         title = "Orders"
+
+        ProgressHUD.show()
     }
 }
 

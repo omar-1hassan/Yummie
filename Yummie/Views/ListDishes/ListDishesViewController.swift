@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ListDishesViewController: UIViewController {
 
@@ -14,18 +15,14 @@ class ListDishesViewController: UIViewController {
     
     //MARK: - Variables
     var category: DishCategory!
-    var dishes: [Dish] = [
-        .init(id: "id1", name: "Indomie", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 34),
-        .init(id: "id1", name: "Garri", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 104),
-        .init(id: "id1", name: "Garri", discription: "This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 104),
-        .init(id: "id1", name: "Piza", discription: "This is the best i have ever tasted", image: "https://picsum.photos/100/200", calories: 98)
-    
-    ]
+    var dishes: [Dish] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
     }
+    
+    
     
 }
 
@@ -34,7 +31,21 @@ extension ListDishesViewController{
         dishesTableView.delegate = self
         dishesTableView.dataSource = self
         dishesTableView.register(UINib(nibName: "DishListTableViewCell", bundle: nil), forCellReuseIdentifier: "DishListTableViewCell")
-        title = category.name
+        title = category.title
+        ProgressHUD.show()
+        
+        NetworkService.shared.fetchCategoryDishes(categoryId: category.id ?? "") { [weak self] (result) in
+            switch result {
+                
+            case .success(let dishes):
+                ProgressHUD.dismiss()
+                self?.dishes = dishes
+                self?.dishesTableView.reloadData()
+                
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
         
     }
 }
