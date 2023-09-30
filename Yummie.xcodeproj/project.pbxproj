@@ -39,6 +39,7 @@
 		04C51FC82AC2DB5D0019ACD9 /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C51FC72AC2DB5D0019ACD9 /* ListDishesViewController.swift */; };
 		04C51FCB2AC2DF000019ACD9 /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C51FCA2AC2DF000019ACD9 /* ListOrdersViewController.swift */; };
 		04C51FCD2AC2E05F0019ACD9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C51FCC2AC2E05F0019ACD9 /* Order.swift */; };
+		04ED86AE2AC82391001F9F00 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED86AD2AC82391001F9F00 /* UserDefaults+Extensions.swift */; };
 		F662F11AC479D03C070D39CD /* Pods_Yummie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A27FAF1099B5C8055444C8 /* Pods_Yummie.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		04C51FC72AC2DB5D0019ACD9 /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
 		04C51FCA2AC2DF000019ACD9 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		04C51FCC2AC2E05F0019ACD9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		04ED86AD2AC82391001F9F00 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		456E655F3965F8818CD9A803 /* Pods-Yummie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummie.release.xcconfig"; path = "Target Support Files/Pods-Yummie/Pods-Yummie.release.xcconfig"; sourceTree = "<group>"; };
 		A3A27FAF1099B5C8055444C8 /* Pods_Yummie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54919764CE791FE88959AC8 /* Pods-Yummie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummie.debug.xcconfig"; path = "Target Support Files/Pods-Yummie/Pods-Yummie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				04C51FAA2AC1F0060019ACD9 /* String+Extension.swift */,
 				04C51FBE2AC2BEAA0019ACD9 /* UIViewController+Extension.swift */,
+				04ED86AD2AC82391001F9F00 /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				04C51FC82AC2DB5D0019ACD9 /* ListDishesViewController.swift in Sources */,
 				04C51FCD2AC2E05F0019ACD9 /* Order.swift in Sources */,
 				041F505C2AC0E00900AC312F /* AppDelegate.swift in Sources */,
+				04ED86AE2AC82391001F9F00 /* UserDefaults+Extensions.swift in Sources */,
 				041F505E2AC0E00900AC312F /* SceneDelegate.swift in Sources */,
 				04C51FAE2AC1F3E40019ACD9 /* CardView.swift in Sources */,
 				049699A12AC5C13B00411CE7 /* Method.swift in Sources */,
@@ -544,7 +548,6 @@
 				INFOPLIST_FILE = Yummie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,7 +575,6 @@
 				INFOPLIST_FILE = Yummie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
