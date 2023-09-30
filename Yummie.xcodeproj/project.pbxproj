@@ -117,14 +117,12 @@
 			children = (
 				04C51FA92AC1EFE70019ACD9 /* Extensions */,
 				0496999B2AC5AAD500411CE7 /* Networking */,
-				04C51F962AC166E00019ACD9 /* CustomViews */,
-				04C51F952AC166D50019ACD9 /* Views */,
 				04C51F942AC166C80019ACD9 /* Models */,
+				04C51F952AC166D50019ACD9 /* Views */,
+				049699A82AC804F200411CE7 /* Controllers */,
 				041F505B2AC0E00900AC312F /* AppDelegate.swift */,
 				041F505D2AC0E00900AC312F /* SceneDelegate.swift */,
-				041F50612AC0E00900AC312F /* Main.storyboard */,
 				041F50642AC0E01000AC312F /* Assets.xcassets */,
-				041F50662AC0E01000AC312F /* LaunchScreen.storyboard */,
 				041F50692AC0E01000AC312F /* Info.plist */,
 			);
 			path = Yummie;
@@ -142,6 +140,18 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		049699A82AC804F200411CE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04C51F982AC1672D0019ACD9 /* OnBoardingViewController.swift */,
+				04C51F9F2AC1C75C0019ACD9 /* HomeViewController.swift */,
+				04C51FBC2AC2BD650019ACD9 /* DishDetailViewController.swift */,
+				04C51FCA2AC2DF000019ACD9 /* ListOrdersViewController.swift */,
+				04C51FC72AC2DB5D0019ACD9 /* ListDishesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		04C51F942AC166C80019ACD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,50 +167,16 @@
 		04C51F952AC166D50019ACD9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04C51FC92AC2DEEE0019ACD9 /* ListOrders */,
-				04C51FC62AC2DB3E0019ACD9 /* ListDishes */,
-				04C51FBB2AC2BD470019ACD9 /* DishDetail */,
-				04C51F9E2AC1C7400019ACD9 /* Home */,
-				04C51F972AC166F80019ACD9 /* OnBoarding */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		04C51F962AC166E00019ACD9 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				04C51FC02AC2D8630019ACD9 /* TabelViewCells */,
-				04C51FAC2AC1F3CA0019ACD9 /* CartView */,
-				04C51FA12AC1EC0E0019ACD9 /* CollectionViewCells */,
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		04C51F972AC166F80019ACD9 /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-				04C51F982AC1672D0019ACD9 /* OnBoardingViewController.swift */,
+				041F50662AC0E01000AC312F /* LaunchScreen.storyboard */,
+				041F50612AC0E00900AC312F /* Main.storyboard */,
 				04C51F9C2AC16BD30019ACD9 /* OnBoardingCollectionViewCell.swift */,
-			);
-			path = OnBoarding;
-			sourceTree = "<group>";
-		};
-		04C51F9E2AC1C7400019ACD9 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				04C51F9F2AC1C75C0019ACD9 /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		04C51FA12AC1EC0E0019ACD9 /* CollectionViewCells */ = {
-			isa = PBXGroup;
-			children = (
+				04C51FC12AC2D8770019ACD9 /* DishListTableViewCell */,
+				04C51FAC2AC1F3CA0019ACD9 /* CartView */,
 				04C51FB62AC2964E0019ACD9 /* DishLandscapeCollectionViewCell */,
 				04C51FAF2AC1FF9C0019ACD9 /* DishPortraiteCollectionViewCell */,
 				04C51FA22AC1EC4D0019ACD9 /* CategoryCollectionViewCell */,
 			);
-			path = CollectionViewCells;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		04C51FA22AC1EC4D0019ACD9 /* CategoryCollectionViewCell */ = {
@@ -247,22 +223,6 @@
 			path = DishLandscapeCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		04C51FBB2AC2BD470019ACD9 /* DishDetail */ = {
-			isa = PBXGroup;
-			children = (
-				04C51FBC2AC2BD650019ACD9 /* DishDetailViewController.swift */,
-			);
-			path = DishDetail;
-			sourceTree = "<group>";
-		};
-		04C51FC02AC2D8630019ACD9 /* TabelViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				04C51FC12AC2D8770019ACD9 /* DishListTableViewCell */,
-			);
-			path = TabelViewCells;
-			sourceTree = "<group>";
-		};
 		04C51FC12AC2D8770019ACD9 /* DishListTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,22 +230,6 @@
 				04C51FC32AC2D8A50019ACD9 /* DishListTableViewCell.xib */,
 			);
 			path = DishListTableViewCell;
-			sourceTree = "<group>";
-		};
-		04C51FC62AC2DB3E0019ACD9 /* ListDishes */ = {
-			isa = PBXGroup;
-			children = (
-				04C51FC72AC2DB5D0019ACD9 /* ListDishesViewController.swift */,
-			);
-			path = ListDishes;
-			sourceTree = "<group>";
-		};
-		04C51FC92AC2DEEE0019ACD9 /* ListOrders */ = {
-			isa = PBXGroup;
-			children = (
-				04C51FCA2AC2DF000019ACD9 /* ListOrdersViewController.swift */,
-			);
-			path = ListOrders;
 			sourceTree = "<group>";
 		};
 		21B3F090EBC5757F2F17920B /* Pods */ = {
